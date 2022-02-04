@@ -3,7 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"weavelab.xyz/2048/Game"
+	"github.com/jinxankit/workat.tech/MachineCoding/2048/Game"
+
 )
 
 var welcome = [...]string{
