@@ -1,4 +1,4 @@
-package cumulative_sum
+package cumulativeSum
 
 import (
 	"fmt"
@@ -6,12 +6,11 @@ import (
 	"testing"
 )
 
-
 func TestCumSum(t *testing.T) {
 	initialArray := []int{1, 2, 3, 4}
-	cumulativeSum := []int{1,3,6,10}
-	var output [] int
-	output = CumSum(initialArray)
+	cumulativeSum := []int{1, 3, 6, 10}
+
+	output := CumSum(initialArray)
 	if !reflect.DeepEqual(output, cumulativeSum) {
 		t.Errorf("Failed ! got %v want %c", output, cumulativeSum)
 	} else {
@@ -19,9 +18,9 @@ func TestCumSum(t *testing.T) {
 	}
 
 }
-func TestMultipleCumSum(t *testing.T){
+func TestMultipleCumSum(t *testing.T) {
 	testcases := []struct {
-		initialArray []int
+		initialArray  []int
 		cumulativeSum []int
 	}{
 		{[]int{1}, []int{1}},
@@ -33,8 +32,8 @@ func TestMultipleCumSum(t *testing.T){
 	}
 	for index, value := range testcases {
 		t.Run(fmt.Sprintf("index=%d", index), func(t *testing.T) {
-			var output [] int
-			output = CumSum(value.initialArray)
+
+			output := CumSum(value.initialArray)
 			if !reflect.DeepEqual(output, value.cumulativeSum) {
 				t.Fatalf("got %v; want %v", output, value.cumulativeSum)
 			} else {
