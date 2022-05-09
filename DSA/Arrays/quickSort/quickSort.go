@@ -1,0 +1,5 @@
+package quickSort
+
+func QuickSort() {
+
+}
