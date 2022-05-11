@@ -7,8 +7,8 @@ import (
 )
 
 func TestCountingSort(t *testing.T) {
-	arr := []int{5,4,2,3,1}
-	res := []int{1,2,3,4,5}
+	arr := []int{1, 4, 1, 2, 7, 5, 2}
+	res := []int{1, 1, 2, 2, 4, 5, 7}
 	output := CountingSort(arr)
 	if !reflect.DeepEqual(output, res) {
 		t.Errorf("Failed ! got %v want %c", output, output)
@@ -18,8 +18,8 @@ func TestCountingSort(t *testing.T) {
 }
 func TestMultipleCumSum(t *testing.T) {
 	testcases := []struct {
-		initialArray  []int
-		output []int
+		initialArray []int
+		output       []int
 	}{
 		{[]int{1}, []int{1}},
 		{[]int{1, 2, 4, 3}, []int{1, 2, 3, 4}},
